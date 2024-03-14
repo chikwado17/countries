@@ -1,13 +1,160 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* light-theme.css */
+html[data-theme="light"] {
+  --color: rgb(5, 5, 5);
+  --background-color: rgb(250, 250, 250);
+}
+
+/* dark-theme.css */
+html[data-theme="dark"] {
+  --color: rgb(250, 250, 250);
+  --background-color: hsl(209, 23%, 22%) !important;
+  box-shadow: 4px 4px 4px hsl(207, 26%, 17%);
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  min-height: 100vh;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.bg-dark {
+  background-color: hsl(209, 23%, 22%) !important;
+  box-shadow: 4px 4px 4px hsl(207, 26%, 17%);
+}
+
+.h1-dark {
+  color: #fff !important;
+}
+
+.h1-dark {
+  color: #fff !important;
+}
+
+.dark-mode {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 4px 4px 4px hsl(207, 26%, 17%) !important;
+  color: #fff;
+}
+.dark-card {
+  background-color: hsl(209, 23%, 22%) !important;
+  box-shadow: 4px 4px 4px hsl(207, 26%, 17%) !important;
+  color: #fff !important;
+}
+.bg-body-tertiary {
+  background-color: #fff !important;
+  box-shadow: 4px 4px 4px hsl(0, 0%, 95%);
+}
+
+.navbar {
+  height: 6rem;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.navbar-theme {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar-theme ion-icon {
+  margin-top: 1px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.navbar-theme label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.search-field {
+  width: 400px !important;
+  outline-color: 1px solid #fff !important;
+
+  background-color: #fff !important;
+  box-shadow: 4px 4px 4px hsl(0, 0%, 95%);
+}
+
+::placeholder {
+  font-size: 14px !important;
+  color: hsl(0, 0%, 52%) !important;
+}
+
+.search {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.filter {
+  margin-right: 30px;
+}
+
+.filter .countrySelect {
+  border: 1px solid hsl(0, 0%, 95%) !important;
+  height: 45px !important;
+  width: 180px;
+  outline: none !important;
+  background-color: #fff !important;
+  box-shadow: 4px 4px 4px hsl(0, 0%, 95%) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+}
+
+.country_card {
+  /* height: 370px !important; */
+  margin-bottom: 30px !important;
+}
+
+.country_header {
+  margin-bottom: 20px !important;
+}
+
+.country_text {
+  font-weight: bold !important;
+  color: #000;
+}
+
+.country-img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 250px !important;
+}
+
+.back_btn {
+  background-color: #fff !important;
+  box-shadow: 4px 4px 4px hsl(0, 0%, 95%) !important;
+}
+
+.details-image {
+  box-shadow: 4px 4px 4px hsl(0, 0%, 95%) !important;
+  cursor: pointer;
+}
+
+.country_label {
+  background-color: #fff !important;
+  box-shadow: 4px 4px 4px hsl(0, 0%, 95%) !important;
+  cursor: pointer;
+  padding: 10px 30px !important;
 }
